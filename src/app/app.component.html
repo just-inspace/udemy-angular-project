@@ -1,5 +1,5 @@
-<app-header></app-header>
+<app-header (onNavigate)="handleNavigation($event)"></app-header>
 <div class="container">
-  <app-recipes></app-recipes>
-  <app-shopping-list></app-shopping-list>
+  <app-recipes *ngIf="isRecipesPage"></app-recipes>
+  <app-shopping-list *ngIf="isShoppingListPage"></app-shopping-list>
 </div>
